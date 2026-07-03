@@ -1,0 +1,16 @@
+source_table,source_column,target_table,target_column,transformation_type,transformation_logic
+products_bronze,,products_silver,pk_products_silver_id,surrogate_key,Auto-generated sequential surrogate primary key starting from 1
+products_bronze,product_id,products_silver,product_id,type_cast,
+products_bronze,product_name,products_silver,product_name,fill_null,mode
+products_bronze,product_description,products_silver,product_description,fill_null,mode
+products_bronze,product_price,products_silver,product_price,fill_null,mean
+products_bronze,product_date_added,products_silver,product_date_added,date_format,YYYY-MM-DD
+products_bronze,product_date_updated,products_silver,product_date_updated,date_format,YYYY-MM-DD
+products_bronze,product_category,products_silver,product_category,fill_null,mode
+products_bronze,product_status,products_silver,product_status,fill_null,mode
+products_bronze,product_rating,products_silver,product_rating,fill_null,mode
+products_bronze,product_reviews,products_silver,product_reviews,fill_null,mode
+products_bronze,product_sales,products_silver,product_sales,fill_null,mean
+products_bronze,product_revenue,products_silver,product_revenue,fill_null,mean
+products_bronze,product_profit,products_silver,product_profit,fill_null,mean
+products_bronze,product_id,products_silver,product_id,dedup,Drop fully duplicate rows

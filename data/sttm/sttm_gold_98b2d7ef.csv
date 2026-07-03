@@ -1,0 +1,11 @@
+source_table,source_column,target_table,target_column,transformation_type,transformation_logic
+products_silver,,products_gold,pk_products_gold_id,surrogate_key,Auto-generated sequential surrogate primary key starting from 1
+products_silver,product_id,products_gold,product_id,passthrough,
+products_silver,product_name,products_gold,product_name,rename,product_name
+products_silver,_load_timestamp,products_gold,_load_timestamp,passthrough,
+products_silver,_source_file,products_gold,_source_file,passthrough,
+orders_silver,product_id,products_gold,product_id,join,products_silver.product_id = orders_silver.product_id
+orders_silver,order_id,products_gold,order_id,join,products_silver.product_id = orders_silver.product_id
+orders_silver,order_date,products_gold,order_date,aggregate,sum
+orders_silver,order_total,products_gold,order_total,aggregate,sum
+orders_silver,order_quantity,products_gold,order_quantity,aggregate,sum

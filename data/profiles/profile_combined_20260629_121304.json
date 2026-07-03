@@ -1,0 +1,64 @@
+{
+  "files": [
+    "C:\\Users\\gypanigrahi\\ai\\AccelerateAI\\AccelerateAI\\AccelerateAI\\data\\landing\\products.csv"
+  ],
+  "datasets": {
+    "products": {
+      "file": "C:\\Users\\gypanigrahi\\ai\\AccelerateAI\\AccelerateAI\\AccelerateAI\\data\\landing\\products.csv",
+      "shape": {
+        "rows": 20,
+        "columns": 4
+      },
+      "columns": {
+        "product_id": {
+          "dtype": "str",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "unique_count": 20,
+          "sample_values": [
+            "P001",
+            "P002",
+            "P003",
+            "P004",
+            "P005"
+          ]
+        },
+        "product_name": {
+          "dtype": "str",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "unique_count": 20,
+          "sample_values": [
+            "iPhone 15",
+            "Samsung Galaxy S24",
+            "AirPods Pro",
+            "Sony WH-1000XM5",
+            "Levi's 501 Jeans"
+          ]
+        },
+        "category": {
+          "dtype": "str",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "unique_count": 5,
+          "sample_values": [
+            "Electronics",
+            "Electronics",
+            "Electronics",
+            "Electronics",
+            "Apparel"
+          ]
+        },
+        "standard_price": {
+          "dtype": "float64",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "unique_count": 19,
+          "min": 12.99,
+          "max": 999.99,
+          "mean": 259.2405
+        }
+      }
+    }
+  }
+}
